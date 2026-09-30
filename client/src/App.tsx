@@ -1,4 +1,5 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router as WouterRouter } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -12,7 +13,7 @@ import MVP from "@/pages/MVP";
 import Team from "@/pages/Team";
 import NotFound from "@/pages/not-found";
 
-function Router() {
+function AppRoutes() {
   return (
     <Layout>
       <Switch>
@@ -27,13 +28,23 @@ function Router() {
   );
 }
 
+// Real hosting serves this at a domain root, where path-based routing (the
+// wouter default) gives clean URLs like /team. A preview embedded under some
+// other path (e.g. a hosted artifact) needs hash-based routing instead, since
+// it doesn't control the outer path — toggled at build time via
+// VITE_HASH_ROUTING, off by default.
+const routerProps =
+  import.meta.env.VITE_HASH_ROUTING === "true" ? { hook: useHashLocation } : {};
+
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Header />
-        <Toaster />
-        <Router />
+        <WouterRouter {...routerProps}>
+          <Header />
+          <Toaster />
+          <AppRoutes />
+        </WouterRouter>
       </TooltipProvider>
     </QueryClientProvider>
   );
