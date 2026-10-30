@@ -9,7 +9,6 @@ npx vite build
 # like /team load the app, which then routes client-side.
 cp dist/public/index.html dist/public/404.html
 
-remote=$(git remote get-url origin)
 cd dist/public
 rm -rf .git
 git init -q -b gh-pages
@@ -17,5 +16,8 @@ git add -A
 git -c user.name="$(git -C ../.. config user.name)" \
     -c user.email="$(git -C ../.. config user.email)" \
     commit -q -m "Deploy $(git -C ../.. rev-parse --short HEAD)"
-git push -f "$remote" gh-pages
-rm -rf .git
+# Push from the main checkout so its remote and credentials are used.
+cd ../..
+git fetch -q dist/public gh-pages
+git push -f origin FETCH_HEAD:refs/heads/gh-pages
+rm -rf dist/public/.git
