@@ -24,6 +24,12 @@ a plain nginx box) — run `npm install && npm run build` and serve the
 host's 404/fallback at `/index.html` so deep links like `/team` resolve
 correctly — `vercel.json` already does this for Vercel.
 
+**GitHub Pages (current live host)** — `npm run deploy:pages` builds the
+site and force-pushes `dist/public` to the `gh-pages` branch, which Pages
+serves at the domain in `client/public/CNAME` (www.kizim.ai). The script
+copies `index.html` to `404.html` so deep links resolve. Re-run it after
+changes on `main`; the live site doesn't rebuild on its own.
+
 To point a purchased domain at the deploy, add it in the host's dashboard
 (e.g. Vercel → Project → Settings → Domains) and follow the DNS records it
 gives you.
