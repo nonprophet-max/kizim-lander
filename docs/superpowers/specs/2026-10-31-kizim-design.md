@@ -11,3 +11,7 @@ Shared: semantic main/footer/nav, route scroll reset, visible focus, current-pag
 Acceptance: original copy retained; all routes work; type check and production build pass; desktop and mobile visual QA; keyboard menu/tabs behavior; no horizontal overflow; independent branch review. Deliver branch, draft PR and local preview. Deployment is a separate final action after review.
 
 References: https://github.com/emilkowalski/skills/blob/main/skills/emil-design-eng/SKILL.md ; https://www.neobrutalism.dev/docs/ ; https://ui.shadcn.com/docs
+
+## User refinement: visual depth
+
+Keep the accepted composition, but add dimensional surfaces in response to the request for depth. Use restrained upper-left lighting, soft contact shadows alongside crisp hard offsets, inset graphite trays and raised gold/SVG plates. Preserve the palette, all copy, existing layout and reduced-motion behavior. Avoid perpetual motion or pointer tracking.

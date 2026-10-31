@@ -1,0 +1,130 @@
+/* Shallow physical layers, lit from the upper left. The editorial layout and
+   original palette remain the foundation; depth belongs to surfaces and diagrams. */
+:root {
+  --surface-raised: linear-gradient(145deg, hsl(var(--foreground) / .065), transparent 65%), hsl(var(--card));
+  --surface-recessed: linear-gradient(160deg, hsl(var(--background) / .3), hsl(var(--foreground) / .025)), hsl(var(--background));
+  --surface-gold: radial-gradient(ellipse at 10% 0%, hsl(var(--foreground) / .3), transparent 58%), linear-gradient(145deg, transparent 40%, hsl(var(--background) / .12)), hsl(var(--primary));
+  --shadow-surface: 0 2px 5px hsl(0 0% 0% / .16), 0 24px 48px -28px hsl(0 0% 0% / .8), inset 0 1px 0 hsl(var(--foreground) / .11);
+  --shadow-inset: inset 0 2px 8px hsl(0 0% 0% / .35), inset 0 -1px 0 hsl(var(--foreground) / .06);
+  --shadow-gold: 0 3px 0 hsl(var(--background) / .5), 0 20px 40px -20px hsl(0 0% 0% / .75), inset 0 1px 0 hsl(var(--foreground) / .5), inset 0 -1px 0 hsl(var(--background) / .2);
+}
+
+body {
+  background-image: radial-gradient(ellipse 1100px 700px at 15% 0%, hsl(var(--primary) / .045), transparent 75%);
+  background-repeat: no-repeat;
+}
+.site-header {
+  background: linear-gradient(180deg, hsl(var(--foreground) / .025), transparent), hsl(var(--background));
+  box-shadow: 0 10px 30px -22px hsl(0 0% 0% / .8), inset 0 1px 0 hsl(var(--foreground) / .06);
+}
+.brand-mark { filter: drop-shadow(0 2px 0 hsl(var(--background))) drop-shadow(0 4px 5px hsl(0 0% 0% / .35)); }
+.mobile-sheet {
+  background: var(--surface-raised);
+  box-shadow: -24px 0 64px hsl(0 0% 0% / .45), inset 1px 0 0 hsl(var(--foreground) / .08);
+}
+
+/* The hero is a warm plate resting above the graphite canvas. */
+.relationship-visual {
+  background: var(--surface-gold);
+  border-color: hsl(var(--primary) / .8);
+  box-shadow: 0 2px 4px hsl(0 0% 0% / .25), 7px 7px 0 hsl(var(--background)),
+    8px 8px 0 hsl(var(--primary) / .42), 14px 24px 42px -16px hsl(0 0% 0% / .7),
+    inset 0 1px 0 hsl(var(--foreground) / .55), inset 0 -1px 0 hsl(var(--background) / .22);
+}
+.hero-copy [data-slot='button'],
+.hero-copy a.bg-primary {
+  background: var(--surface-gold);
+  box-shadow: var(--shadow-gold);
+  border-color: hsl(var(--primary) / .8);
+}
+.explore-link {
+  position: relative;
+  isolation: isolate;
+}
+.explore-link::before {
+  content: '';
+  position: absolute;
+  inset: 0 -16px;
+  background: linear-gradient(100deg, hsl(var(--foreground) / .035), transparent 75%);
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / .045);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  transition: opacity 180ms ease;
+}
+
+/* Graphs and workflow surfaces sit in shallow trays; active tiles sit above. */
+.coverage-figure, .solution-flow, .result-card:not(.result-card-gold) {
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-surface);
+  border-color: hsl(var(--foreground) / .18);
+}
+.coverage-grid { padding: 8px; background: var(--surface-recessed); box-shadow: var(--shadow-inset); }
+.coverage-grid [data-coverage='covered'] {
+  background: var(--surface-gold);
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / .4), 0 2px 3px hsl(0 0% 0% / .25);
+}
+.coverage-grid [data-coverage='gap'] { box-shadow: inset 0 1px 3px hsl(0 0% 0% / .3); }
+.solution-tabs > [role='tablist'] { box-shadow: 0 8px 16px -16px hsl(0 0% 0% / .8); }
+.solution-tabs [role='tab'][data-state='active'] {
+  background: linear-gradient(180deg, hsl(var(--primary) / .07), hsl(var(--primary) / .015));
+  box-shadow: inset 0 1px 0 hsl(var(--primary) / .12);
+}
+.result-bars > div { box-shadow: var(--shadow-inset); }
+.result-bars > div:last-child { background: var(--surface-gold); box-shadow: inset 0 1px 0 hsl(var(--foreground) / .4), 0 2px 4px hsl(0 0% 0% / .25); }
+.gold-callout, .result-card-gold, .mvp-kpi-panel {
+  background: var(--surface-gold);
+  box-shadow: var(--shadow-gold);
+}
+
+.mvp-segment-mark span, .mvp-segment-mark--lifecycle span:nth-child(2) {
+  box-shadow: 0 3px 4px hsl(0 0% 0% / .25), inset 0 1px 0 hsl(var(--foreground) / .18);
+}
+.mvp-data-desktop, .mvp-data-mobile {
+  background: var(--surface-recessed);
+  box-shadow: var(--shadow-inset), 0 20px 36px -28px hsl(0 0% 0% / .8);
+}
+.mvp-data-row:nth-child(odd), .mvp-data-mobile .mvp-data-cell:nth-child(4n+1), .mvp-data-mobile .mvp-data-cell:nth-child(4n+2) {
+  background-color: hsl(var(--foreground) / .025);
+}
+.mvp-pipeline {
+  background: var(--surface-recessed);
+  box-shadow: var(--shadow-inset);
+}
+.mvp-pipeline-node { background: var(--surface-raised); box-shadow: var(--shadow-surface); }
+.mvp-pipeline-node--gold { background: var(--surface-gold); box-shadow: var(--shadow-gold); }
+
+/* Typographic portraits become framed, recessed beds with raised initials. */
+.team-section { background: transparent; }
+.team-portrait {
+  background: radial-gradient(ellipse at 25% 10%, hsl(var(--foreground) / .07), transparent 75%), hsl(var(--card));
+  box-shadow: inset 0 1px 0 hsl(var(--foreground) / .09), inset 0 -26px 45px -28px hsl(0 0% 0% / .65), 0 18px 32px -24px hsl(0 0% 0% / .8);
+  border-color: hsl(var(--foreground) / .16);
+  border-bottom-color: hsl(var(--primary));
+}
+.team-portrait::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid hsl(var(--foreground) / .045);
+  box-shadow: inset 1px 1px 4px hsl(0 0% 0% / .16);
+  pointer-events: none;
+}
+.team-initials {
+  position: relative;
+  text-shadow: 0 1px 0 hsl(var(--primary) / .8), 0 3px 0 hsl(var(--background)), 3px 8px 8px hsl(0 0% 0% / .35);
+}
+.team-technology {
+  background: var(--surface-gold);
+  box-shadow: 8px 8px 0 hsl(var(--background)), 9px 9px 0 hsl(var(--primary) / .4), 14px 24px 40px -24px hsl(0 0% 0% / .8), inset 0 1px 0 hsl(var(--foreground) / .5);
+}
+.site-footer { background: linear-gradient(180deg, hsl(0 0% 0% / .12), transparent 60%); box-shadow: inset 0 1px 0 hsl(var(--foreground) / .035); }
+
+@media (hover:hover) and (pointer:fine) {
+  .explore-link:hover::before { opacity: 1; }
+}
+@media (max-width:760px) {
+  .relationship-visual {
+    box-shadow: 0 2px 4px hsl(0 0% 0% / .2), 5px 5px 0 hsl(var(--background)), 6px 6px 0 hsl(var(--primary) / .4), 8px 18px 28px -16px hsl(0 0% 0% / .65), inset 0 1px 0 hsl(var(--foreground) / .5);
+  }
+}

@@ -26,3 +26,9 @@ An independent review found four P2 issues: mobile route focus, short-screen men
 ## Deliberate boundaries
 
 The new coverage, relationship and workflow diagrams illustrate existing source statements. They do not add measured results, product screenshots, customer data or verified performance claims. Existing claims and biographies have not been fact-checked or rewritten. The site remains static with no functional VIP dashboard or new backend integration.
+
+## Depth refinement
+
+Following visual feedback, added a shared depth stylesheet: upper-left highlights, layered graphite trays, gold plates with contact shadows, recessed chart beds, raised workflow tiles and framed typographic portraits. The hero's nested discs and central block now have bounded static SVG shading. Copy, layout and interactions remain intact.
+
+The follow-up passes the same 73 content checks, TypeScript, production build and whitespace check. All five production routes were checked at 1440px and 390px with no horizontal overflow or observed runtime errors. An independent review of the three-file visual delta found no material issues. No libraries or animation systems were added.
