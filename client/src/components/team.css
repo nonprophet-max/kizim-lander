@@ -1,0 +1,145 @@
+.team-section {
+  padding-block: clamp(4rem, 7vw, 7rem) clamp(5rem, 8vw, 8rem);
+  background: #1c1e21;
+  color: #fff;
+}
+
+.team-header {
+  padding-bottom: clamp(2.5rem, 5vw, 5rem);
+}
+
+.team-heading {
+  margin: 1.5rem 0 0;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 3rem;
+}
+
+.team-member {
+  min-width: 0;
+}
+
+.team-portrait {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 12rem;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 22%);
+  border-bottom: 3px solid #fbd78e;
+  padding: 1.5rem 1.25rem 0;
+}
+
+.team-number {
+  position: absolute;
+  top: 1rem;
+  left: 1.25rem;
+  color: #fbd78e;
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 0.75rem;
+  line-height: 1;
+}
+
+.team-initials {
+  display: block;
+  margin-bottom: -0.08em;
+  color: #fbd78e;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: clamp(7.5rem, 20vw, 12rem);
+  font-weight: 800;
+  letter-spacing: -0.075em;
+  line-height: 1;
+}
+
+.team-portrait-mark {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  color: rgb(255 255 255 / 44%);
+  font-family: 'Red Hat Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1;
+}
+
+.team-name {
+  margin: 1.75rem 0 1.25rem;
+  color: #fff;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: clamp(2.125rem, 3.3vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+  white-space: pre-line;
+}
+
+.team-bio {
+  max-width: 40rem;
+  margin: 0;
+  color: #b9bbc0;
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.team-technology {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
+  margin-top: clamp(4rem, 7vw, 7rem);
+  border: 1px solid #fbd78e;
+  padding: clamp(1.5rem, 4vw, 3.5rem);
+  background: #fbd78e;
+  color: #1c1e21;
+  box-shadow: 8px 8px 0 #1c1e21, 9px 9px 0 rgb(251 215 142 / 65%);
+}
+
+.team-technology-title {
+  max-width: 10em;
+  margin: 0;
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: clamp(2rem, 3.3vw, 3rem);
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  line-height: 1.08;
+}
+
+.team-technology-copy {
+  margin: 0;
+  border-top: 1px solid rgb(28 30 33 / 30%);
+  padding-top: 1.5rem;
+  font-family: 'Red Hat Text', sans-serif;
+  font-size: clamp(1rem, 1.4vw, 1.1875rem);
+  line-height: 1.65;
+}
+
+@media (min-width: 800px) {
+  .team-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .team-portrait {
+    min-height: clamp(14rem, 21vw, 18rem);
+  }
+
+  .team-initials {
+    font-size: clamp(6rem, 11.5vw, 11rem);
+  }
+
+  .team-technology {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .team-technology-copy {
+    border-top: 0;
+    border-left: 1px solid rgb(28 30 33 / 30%);
+    padding-top: 0;
+    padding-left: clamp(2rem, 4vw, 4rem);
+  }
+}

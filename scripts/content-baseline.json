@@ -1,0 +1,134 @@
+{
+  "components/Hero.tsx": {
+    "copy": {
+      "text-brand-title": "KIZIM AI",
+      "text-hero-message": "KIZIM is the 360 degree relationship layer between players and your platform.",
+      "text-cta": "Let's build together."
+    },
+    "literals": [
+      "@assets/hero-logo.png",
+      "radial-gradient(circle at 20% 50%, rgba(251, 215, 142, 0.35) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(201, 124, 75, 0.30) 0%, transparent 40%), radial-gradient(circle at 80% 80%, rgba(143, 168, 138, 0.25) 0%, transparent 50%), radial-gradient(circle at 50% 50%, rgba(118, 88, 13, 0.25) 0%, transparent 60%), #1C1E21",
+      "radial-gradient(circle, black 40%, transparent 70%)",
+      "radial-gradient(circle, black 40%, transparent 70%)"
+    ]
+  },
+  "components/ProblemSection.tsx": {
+    "copy": {
+      "text-problem-intro": "Operators focus on revenue, yet costs limit human VIP team scaling. Without adequate support 50% - 90% of VIP customers industry-wide get ignored or mishandled",
+      "card-problem-1": "The average iGaming operator optimizes and effectively engages only 10% - 50% of their VIP player base due to the commercial infeasibility of scaling up human VIP management teams to cover this segment of users. Hiring more people adds too much cost, and existing teams routinely face issues with lack of operational skill and execution.",
+      "card-problem-2": "Retention strategies remain unexecuted, player wants are overlooked, and VIPs go inactive or leave. This is a universal occurrence across igaming operators, and its happening to the most valuable player segment operators have. The one which determines whether they are profitable or not.",
+      "card-problem-3": "In lieu of 100% VIP player segment coverage, scaling activations and retention efforts often end up in automated outreach and offer strategies to lower-value player segments - the igaming equivalent of robo-calling and email spam. These strategies often generate little in terms of return and worse yet, ignore the fundamental issue at hand:",
+      "card-ai-callout": "AI adoption must happen within this service gap to generate immediate increases in revenue"
+    },
+    "literals": [
+      "./SectionLabel"
+    ]
+  },
+  "components/ProblemStatement.tsx": {
+    "copy": {
+      "text-problem-statement": "Operators are unable to effectively service the playerbase that keep them in business.",
+      "text-solution-headline": "Our Agentic AI VIP Managers can."
+    },
+    "literals": [
+      "polygon(0 20%, 100% 0, 100% 100%, 0 80%)"
+    ]
+  },
+  "pages/Solution.tsx": {
+    "copy": {
+      "text-solution-intro": "Agentic VIP dashboards & handlers that optimize and execute retention strategies, value segmentation work & player support functions.",
+      "text-solution-tagline": "Every VIP gets treated like a VIP",
+      "card-solution-1": "Will work either from existing Business Intelligence data (segmentations, lifecycles, game tendencies, bonus offer/ redemption dynamics) or start from the ground up via pre-programmed VIP segmentation and data assumptions.",
+      "card-solution-2": "Will create VIP Prediction Models, Identification Reports; execute Player Evaluation and Monitoring and VIP Client Portfolio Management with 24/7-on performance.",
+      "card-solution-3": "Will offer a 360 degree client monitoring and management service which will go beyond simple automated dashboards, data analysis & engagement recommendation. In future phases across 2026+ it will execute offers, player outreach actions and VIP handling tasks autonomously.",
+      "text-solution-conclusion": "No player forgotten, No additional VIP management team headcount needed.",
+      "text-result-1": "Increase in adequate coverage of VIP playerbase from 10% - 50% to 100%.",
+      "text-result-2": "Decrease overhead to do so by 10X"
+    },
+    "literals": [
+      "react",
+      "@/components/SectionLabel",
+      "solution",
+      "result",
+      "solution",
+      "solution",
+      "solution",
+      "bg-primary/20 text-primary border-b-2 border-primary",
+      "text-foreground",
+      "result",
+      "result",
+      "bg-primary/20 text-primary border-b-2 border-primary",
+      "text-foreground",
+      "solution",
+      "result"
+    ]
+  },
+  "components/MVPCombined.tsx": {
+    "copy": {
+      "text-mvp-title": "AI-powered VIP Dashboard with 'Next Best Action' Recommendation Engine",
+      "text-mvp-subtitle": "Full-scope dashboard showing all VIP players segmented by:",
+      "text-segment-1": "VIP Status (via deposit segmentation & play behavior segmentation)",
+      "text-segment-2": "Lifecycle Status (via registration status, deposit frequency segmentation & activity vs. inactivity segmentation)",
+      "text-segment-3": "Gameplay Behavior (via gametype segmentation & gameplay frequency + wager volume segmentation)",
+      "text-data-points-intro": "Minimum data points our AI dashboard contemplates (open to variability and uncapped additions):",
+      "text-rec-alpha": "Recommendation Engine | Alpha:",
+      "text-batch-feed": "Batch \"next-best action\" JSON feed",
+      "card-rec-1": "A near-live feed which scores and ranks every single VIP player on your platform based on aforementioned metrics",
+      "card-rec-2": "Real-time next-best action advice for human handlers (i.e. 'Give Player 1 X free spins on game Y', 'Offer Player 2 Bonus Money promotion with XYZ parameters', 'Feature game Z to player 3' etc.) taking the guesswork, manual inference & suboptimal segmentation/ activation out of the equation.",
+      "text-validation": "Validation report and Internal Review UI",
+      "card-validation-1": "Automated documentation to compare Recommendation Engine advice against archive/ history of human VIP handler actions to effectively benchmark optimisations",
+      "card-validation-2": "Backoffice for human workers to review and benchmark outcomes of AI dashboard recommended actions",
+      "text-compliance-subtitle": "Compliance and Analytics Console + Security:",
+      "text-alert-engine": "Live RG/AML Alert Engine",
+      "card-compliance-1": "Near real-time continuous full platform compliance monitoring based on ingested data with less than 5 minute alert-latency",
+      "card-compliance-2": "Audit Log exports via CSV/JSON",
+      "text-kpi-dashboard": "KPI Dashboard",
+      "card-kpi-1": "Retention Statistics",
+      "card-kpi-2": "Segmented Average Net Gaming Revenue",
+      "card-kpi-3": "Risk Case Compilation over time across VIP segments",
+      "card-kpi-4": "Comp ROI for VIP segments over time"
+    },
+    "literals": [
+      "./SectionLabel",
+      "NRC",
+      "FTD",
+      "Deposits",
+      "Net Deposits",
+      "Withdrawls",
+      "NGR",
+      "GGR",
+      "Turnover",
+      "Margin",
+      "Hold",
+      "ADPU",
+      "ARPU",
+      "Account Balance",
+      "Bonus Balance",
+      "Bonus Money",
+      "Free Spins",
+      "Wager Requirements",
+      "Bonus' Converted",
+      "Cashback",
+      "Cash Drop",
+      "Wager Factor",
+      "Vertical",
+      "KYC/ SOW/ SOF",
+      "+"
+    ]
+  },
+  "components/TeamSection.tsx": {
+    "copy": {
+      "card-livelike": "Powered by LiveLike Technology LiveLike is a technology company dedicated to empowering digital experiences, leveraging AI & industry leading IT and data infrastructure to develop custom user retention, monetization and engagement solutions. The firm services clients including La Liga, NASCAR, Madison Square Garden Group and Canal+ among many others.",
+      "text-powered-by": "Powered by LiveLike Technology",
+      "text-livelike-description": "LiveLike is a technology company dedicated to empowering digital experiences, leveraging AI & industry leading IT and data infrastructure to develop custom user retention, monetization and engagement solutions. The firm services clients including La Liga, NASCAR, Madison Square Garden Group and Canal+ among many others."
+    },
+    "literals": [
+      "./SectionLabel",
+      "Luke Skyrme",
+      "Veteran executive with 11 years of experience in the iGaming space servicing EU & APAC markets including 4+ years as a multi-market C-Suite operator as COO and later CEO of Infinizia Ltd.",
+      "Miheer Walavalkar",
+      "Co-founder & CEO, LiveLike. Sports Business Journal/ Leaders 40 under 40 lists inductee. 17 years of experience as engineer and founder in IT infrastructure, Finance & data/ gamification platforms.",
+      "Max Rabinovitch",
+      "CSO, The Chiliz Group & web3/ on-chain iGaming investor/ advisor. 7+ years experience leading strategy for Chiliz (L1 EVM protocol and token w/ $400m+ market cap) and the Socios.com platform."
+    ]
+  }
+}
